@@ -153,18 +153,18 @@ document.addEventListener('DOMContentLoaded', function () {
     /* ------------------------ Mobile Menu Toggle ------------------------ */
 
     const navbarToggle = document.querySelector('.navbar-toggle');
-    const navbarMenu = document.querySelector('.navbar-menu');
+    const navbarMenu = document.querySelector('.mobile-menu');
 
-    if (navbarToggle && navbarMenu) {
+    if (navbarToggle && mobileMenu) {
         navbarToggle.addEventListener('click', function () {
             const expanded = this.getAttribute('aria-expanded') === 'true' || false;
             this.setAttribute('aria-expanded', !expanded);
-            navbarMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
         });
     }
 
     // Close mobile menu when clicking on a menu link (if mobile menu active)
-    const mobileLinks = navbarMenu ? navbarMenu.querySelectorAll('a') : [];
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
     mobileLinks.forEach((link) => {
         link.addEventListener('click', () => {
             if (navbarMenu.classList.contains('active')) {
@@ -185,6 +185,27 @@ document.addEventListener('DOMContentLoaded', function () {
             navbar.classList.remove('scrolled');
         }
     });
+
+    /* ------------------------ Mobile Dropdown Toggle ------------------------ */
+    const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+    const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+
+    if (mobileDropdownToggle && mobileDropdownMenu) {
+        mobileDropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent link from navigating
+            
+            // Check if menu is currently open
+            const isOpen = mobileDropdownMenu.style.display === 'block';
+            
+            if (isOpen) {
+                mobileDropdownMenu.style.display = 'none';
+                this.querySelector('i').style.transform = 'rotate(0deg)';
+            } else {
+                mobileDropdownMenu.style.display = 'block';
+                this.querySelector('i').style.transform = 'rotate(180deg)';
+            }
+        });
+    }
 
     /* -------------------- Smooth Dropdown for "Services" Menu -------------------- */
 
