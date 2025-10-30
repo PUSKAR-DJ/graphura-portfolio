@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,179 +9,178 @@
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Figtree:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Figtree:wght@400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/blog.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/blog.css">
 
 </head>
+
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="index.html" aria-label="Graphura Home">
+                    <img src="image/bg removed.png" alt="Graphura Logo" />
+                </a>
+                <div class="navbar-toggle" aria-label="Toggle Menu" aria-expanded="false" role="button" tabindex="0">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="navbar-menu">
+                <ul class="navbar-nav" role="menubar" aria-label="Primary Navigation">
+                    <li role="none">
+                        <a role="menuitem" href="index.html" class="active">Home</a>
+                    </li>
+
+                    <!-- Services Dropdown menu -->
+                    <li class="nav-dropdown" role="none">
+                        <a href="#" class="dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false"
+                            tabindex="0">
+                            Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-label="Services submenu">
+                            <li role="none"><a role="menuitem" href="services/seo.html">SEO Services</a></li>
+                            <li role="none"><a role="menuitem" href="services/smm.html">Social Media Marketing</a></li>
+                            <li role="none"><a role="menuitem" href="services/smo.html">Social Media Optimization</a>
+                            </li>
+                            <li role="none"><a role="menuitem" href="services/Flyers.html">Flyers</a></li>
+                            <li role="none"><a role="menuitem" href="services/cw.html">Content Writing</a></li>
+                            <li role="none"><a role="menuitem" href="services/Thumbnail.html">Thumbnail Design</a></li>
+                            <li role="none"><a role="menuitem" href="services/banner.html">Banner Design</a></li>
+                            <li role="none"><a role="menuitem" href="services/logo.html">Logo Design</a></li>
+                            <li role="none"><a role="menuitem" href="services/card.html">Business Card Design</a></li>
+                            <li role="none"><a role="menuitem" href="services/poster.html">Poster Design</a></li>
+                        </ul>
+                    </li>
+
+                    <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+                    <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+                    <li role="none">
+                        <a role="menuitem" href="contact.html" class="btn btn-primary" style="color: #fff;">Contact
+                            Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+  <!-- Blog Hero Section -->
+  <section class="blog-hero">
+    <!-- Animated Background Particles -->
+    <div class="particles-container">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+      <div class="floating-icon" data-speed="2">
+        <i class="fas fa-pen-nib"></i>
+      </div>
+      <div class="floating-icon" data-speed="1.5">
+        <i class="fas fa-feather"></i>
+      </div>
+      <div class="floating-icon" data-speed="2.5">
+        <i class="fas fa-book-open"></i>
+      </div>
+      <div class="floating-icon" data-speed="1.8">
+        <i class="fas fa-blog"></i>
+      </div>
+    </div>
     <div class="container">
-      <div class="navbar-brand">
-        <a href="../index.html" aria-label="Graphura Home">
-          <img src="../image/bg removed.png" alt="Graphura Logo"/>
-        </a>
-      </div>
-      <div class="navbar-menu">
-        <ul class="navbar-nav" role="menubar" aria-label="Primary Navigation">
-          <li role="none">
-            <a role="menuitem" href="../index.html">Home</a>
-          </li>
+      <div class="blog-hero-content">
+        <div class="blog-hero-text">
+          <div class="blog-hero-badge">
+          </div>
+          <h1 class="blog-hero-title">
+            <span class="title-line">Explore Expert Articles &</span>
+            <span class="title-highlight">Industry Trends</span>
+            <span class="title-line">Master Digital Marketing</span>
+          </h1>
+          <p class="blog-hero-subtitle">
+            Discover actionable tips and strategies to grow your business effectively with our expert insights.
+            <span class="highlight typing-text">Stay ahead of the curve</span>
+          </p>
 
-          <!-- Services Dropdown menu -->
-          <li class="nav-dropdown" role="none">
-            <a
-              href="#"
-              class="dropdown-toggle"
-              role="menuitem"
-              aria-haspopup="true"
-              aria-expanded="false"
-              tabindex="0"
-            >
-              Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          <div class="blog-hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Articles Published</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50K+</span>
+              <span class="stat-label">Monthly Readers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">95%</span>
+              <span class="stat-label">Success Rate</span>
+            </div>
+          </div>
+
+          <div class="blog-hero-buttons">
+            <a href="#featured-posts" class="btn btn-glow">
+              <span>Read Latest Posts</span>
+              <i class="fas fa-arrow-down"></i>
             </a>
-            <ul class="dropdown-menu" role="menu" aria-label="Services submenu">
-              <li role="none"><a role="menuitem" href="../services/seo.html">SEO Services</a></li>
-              <li role="none"><a role="menuitem" href="../services/smm.html">Social Media Marketing</a></li>
-              <li role="none"><a role="menuitem" href="../services/smo.html">Social Media Optimization</a></li>
-              <li role="none"><a role="menuitem" href="../services/Flyers.html">Flyers</a></li>
-              <li role="none"><a role="menuitem" href="../services/cw.html">Content Writing</a></li>
-              <li role="none"><a role="menuitem" href="../services/Thumbnail.html">Thumbnail Design</a></li>
-              <li role="none"><a role="menuitem" href="../services/banner.html">Banner Design</a></li>
-              <li role="none"><a role="menuitem" href="../services/logo-design.html">Logo Design</a></li>
-              <li role="none"><a role="menuitem" href="../services/business-card.html">Business Card Design</a></li>
-              <li role="none"><a role="menuitem" href="../services/poster.html">Poster Design</a></li>
-            </ul>
-          </li>
+            <a href="../contact.html" class="btn btn-outline-glow">
+              <span>Subscribe</span>
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
 
-          <li role="none"><a role="menuitem" href="../about.html">About Us</a></li>
-          <li role="none"><a role="menuitem" href="../blog.html" class="active">Blog</a></li>
-          <li role="none">
-            <a role="menuitem" href="../contact.html" class="btn btn-primary" style="color: #fff;">Contact Us</a>
-          </li>
-        </ul>
-        <div class="navbar-toggle" aria-label="Toggle Menu" aria-expanded="false" role="button" tabindex="0">
-          <i class="fas fa-bars"></i>
-        </div>
-      </div>
-    </div>
-  </nav>
+        <div class="blog-hero-visual">
+          <div class="blog-hero-image-container">
+            <div class="blog-hero-image">
+              <img src="image/bg removed.png" alt="Graphura Blog Insights">
+            </div>
+            <div class="image-glow"></div>
+          </div>
 
-<!-- Blog Hero Section -->
-<section class="blog-hero">
-  <!-- Animated Background Particles -->
-  <div class="particles-container">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </div>
-
-  <!-- Floating Elements -->
-  <div class="floating-elements">
-    <div class="floating-icon" data-speed="2">
-      <i class="fas fa-pen-nib"></i>
-    </div>
-    <div class="floating-icon" data-speed="1.5">
-      <i class="fas fa-feather"></i>
-    </div>
-    <div class="floating-icon" data-speed="2.5">
-      <i class="fas fa-book-open"></i>
-    </div>
-    <div class="floating-icon" data-speed="1.8">
-      <i class="fas fa-blog"></i>
-    </div>
-  </div>
-  <div class="container">
-    <div class="blog-hero-content">
-      <div class="blog-hero-text">
-        <div class="blog-hero-badge">
-        </div>
-        <h1 class="blog-hero-title">
-          <span class="title-line">Explore Expert Articles &</span>
-          <span class="title-highlight">Industry Trends</span>
-          <span class="title-line">Master Digital Marketing</span>
-        </h1>
-        <p class="blog-hero-subtitle">
-          Discover actionable tips and strategies to grow your business effectively with our expert insights.
-          <span class="highlight typing-text">Stay ahead of the curve</span>
-        </p>
-        
-        <div class="blog-hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">100+</span>
-            <span class="stat-label">Articles Published</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">50K+</span>
-            <span class="stat-label">Monthly Readers</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">95%</span>
-            <span class="stat-label">Success Rate</span>
-          </div>
-        </div>
-        
-        <div class="blog-hero-buttons">
-          <a href="#featured-posts" class="btn btn-glow">
-            <span>Read Latest Posts</span>
-            <i class="fas fa-arrow-down"></i>
-          </a>
-          <a href="../contact.html" class="btn btn-outline-glow">
-            <span>Subscribe</span>
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-      
-      <div class="blog-hero-visual">
-        <div class="blog-hero-image-container">
-          <div class="blog-hero-image">
-            <img src="../image/bg removed.png" alt="Graphura Blog Insights">
-          </div>
-          <div class="image-glow"></div>
-        </div>
-        
-        <!-- Floating Cards -->
-        <div class="floating-cards">
-          <div class="floating-card card-1">
-            <i class="fas fa-chart-line"></i>
-            <span>SEO Tips</span>
-          </div>
-          <div class="floating-card card-2">
-            <i class="fas fa-hashtag"></i>
-            <span>Social Media</span>
-          </div>
-          <div class="floating-card card-3">
-            <i class="fas fa-paint-brush"></i>
-            <span>Design Trends</span>
+          <!-- Floating Cards -->
+          <div class="floating-cards">
+            <div class="floating-card card-1">
+              <i class="fas fa-chart-line"></i>
+              <span>SEO Tips</span>
+            </div>
+            <div class="floating-card card-2">
+              <i class="fas fa-hashtag"></i>
+              <span>Social Media</span>
+            </div>
+            <div class="floating-card card-3">
+              <i class="fas fa-paint-brush"></i>
+              <span>Design Trends</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Scroll Indicator -->
-  <div class="scroll-indicator">
-    <div class="scroll-text">Scroll to explore</div>
-    <div class="scroll-arrow">
-      <i class="fas fa-chevron-down"></i>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-text">Scroll to explore</div>
+      <div class="scroll-arrow">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- Featured Posts Section -->
   <section class="featured-posts">
     <div class="container">
@@ -201,7 +201,8 @@
           </div>
           <div class="post-content">
             <h3>5 Essential SEO Strategies for Small Businesses</h3>
-            <p>Discover the most effective SEO techniques to boost your online presence and drive organic traffic to your website.</p>
+            <p>Discover the most effective SEO techniques to boost your online presence and drive organic traffic to
+              your website.</p>
             <a href="../blog/seo-strategies.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
@@ -212,7 +213,8 @@
           </div>
           <div class="post-content">
             <h3>Social Media Trends to Watch in 2025</h3>
-            <p>Stay ahead of the curve with these emerging social media trends that will shape digital marketing in the coming year.</p>
+            <p>Stay ahead of the curve with these emerging social media trends that will shape digital marketing in the
+              coming year.</p>
             <a href="../blog/social-media-trends.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
@@ -251,7 +253,8 @@
           </div>
           <div class="post-content">
             <h3>The Power of Email Marketing in 2025</h3>
-            <p>Why email marketing remains one of the most effective digital channels for customer acquisition and retention.</p>
+            <p>Why email marketing remains one of the most effective digital channels for customer acquisition and
+              retention.</p>
             <a href="../blog/email-marketing.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
@@ -262,7 +265,8 @@
           </div>
           <div class="post-content">
             <h3>Branding Tips for Startups</h3>
-            <p>Establish a strong brand identity from day one with these expert tips for startups and small businesses.</p>
+            <p>Establish a strong brand identity from day one with these expert tips for startups and small businesses.
+            </p>
             <a href="../blog/branding-tips.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
@@ -295,7 +299,8 @@
           </div>
           <div class="post-content">
             <h3>Building a Content Strategy That Converts</h3>
-            <p>Learn how to develop a content strategy that not only engages but also converts visitors into customers.</p>
+            <p>Learn how to develop a content strategy that not only engages but also converts visitors into customers.
+            </p>
             <a href="../blog/content-strategy.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
@@ -310,11 +315,7 @@
         <h2>Stay Updated with Graphura</h2>
         <p>Subscribe to our newsletter for the latest digital marketing insights, tips, and industry trends.</p>
         <form class="subscribe-form" aria-label="Subscribe to newsletter">
-          <input
-            type="email"
-            placeholder="Your email address"
-            required
-          />
+          <input type="email" placeholder="Your email address" required />
           <button type="submit" class="btn btn-accent">
             Subscribe
           </button>
@@ -329,12 +330,15 @@
       <div class="footer-content">
         <div class="footer-about">
           <h3>Graphura</h3>
-          <p>Your trusted digital marketing partner helping businesses grow their online presence and reach their target audience effectively.</p>
+          <p>Your trusted digital marketing partner helping businesses grow their online presence and reach their target
+            audience effectively.</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/share/19nKAMTopZ/"><i class="fab fa-facebook-f"></i></a>
             <a href="https://share.google/w9KeZZ72v8KQxGpFn"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/graphura-india-private-limited/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/graphura.in?igsh=MXNqNmtidzljNDJlag=="><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/graphura-india-private-limited/"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/graphura.in?igsh=MXNqNmtidzljNDJlag=="><i
+                class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div class="footer-links">
@@ -351,11 +355,11 @@
         <div class="footer-services">
           <h4>Our Services</h4>
           <ul>
-             <li role="none"><a role="menuitem" href="services/seo.html">SEO Services</a></li>
-                            <li role="none"><a role="menuitem" href="services/smm.html">Social Media Marketing</a></li>
-                            <li role="none"><a role="menuitem" href="services/smo.html">Social Media Optimization</a></li>
-                            <li role="none"><a role="menuitem" href="services/Flyers.html">Flyers</a></li>
-                            <li role="none"><a role="menuitem" href="services/cw.html">Content Writing</a></li>
+            <li role="none"><a role="menuitem" href="services/seo.html">SEO Services</a></li>
+            <li role="none"><a role="menuitem" href="services/smm.html">Social Media Marketing</a></li>
+            <li role="none"><a role="menuitem" href="services/smo.html">Social Media Optimization</a></li>
+            <li role="none"><a role="menuitem" href="services/Flyers.html">Flyers</a></li>
+            <li role="none"><a role="menuitem" href="services/cw.html">Content Writing</a></li>
           </ul>
         </div>
         <div class="footer-contact">
@@ -378,14 +382,56 @@
     </div>
   </footer>
 
-<!-- WhatsApp Chat Button -->
-<div class="whatsapp-chat">
+  <!-- WhatsApp Chat Button -->
+  <div class="whatsapp-chat">
     <a href="https://wa.me/+917378021327" target="_blank" class="chat-btn">
-        <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-whatsapp"></i>
     </a>
-</div>
+  </div>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.querySelector(".navbar-toggle");
+            const menu = document.querySelector(".navbar-nav");
+            const cont = document.querySelector(".container");
+            const dropdownToggles = document.querySelectorAll(".nav-dropdown > .dropdown-toggle");
+            let flag = 0;
+
+            // Mobile menu toggle
+            toggle.addEventListener("click", () => {
+                document.body.classList.toggle("menu-open");
+            });
+            toggle.addEventListener("click", () => {
+                if (flag === 0) {
+                    cont.style.flexWrap = "wrap";
+                } else {
+                    cont.style.flexWrap = "nowrap";
+                }
+                flag = 1 - flag;
+                menu.classList.toggle("active");
+                toggle.classList.toggle("active");
+                // const expanded = toggle.getAttribute("aria-expanded") === "true";
+                toggle.setAttribute("aria-expanded", !expanded);
+            });
+
+            // Dropdown toggle for mobile
+            dropdownToggles.forEach((btn) => {
+                btn.addEventListener("click", (e) => {
+                    if (window.innerWidth <= 900) {
+                        e.preventDefault();
+                        const dropdownMenu = btn.nextElementSibling;
+                        dropdownMenu.classList.toggle("active");
+                        const expanded = btn.getAttribute("aria-expanded") === "true";
+
+                        btn.setAttribute("aria-expanded", !expanded);
+                    }
+                });
+            });
+        });
+    </script>
 
 
   <script src="../js/script.js"></script>
 </body>
+
 </html>

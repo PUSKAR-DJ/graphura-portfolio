@@ -26,29 +26,27 @@
                 <a href="index.html" aria-label="Graphura Home">
                     <img src="image/bg removed.png" alt="Graphura Logo" />
                 </a>
+                <div class="navbar-toggle" aria-label="Toggle Menu" aria-expanded="false" role="button" tabindex="0">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
             <div class="navbar-menu">
                 <ul class="navbar-nav" role="menubar" aria-label="Primary Navigation">
                     <li role="none">
-                        <a role="menuitem" href="index.html">Home</a>
+                        <a role="menuitem" href="index.html" class="active">Home</a>
                     </li>
 
                     <!-- Services Dropdown menu -->
                     <li class="nav-dropdown" role="none">
-                        <a
-                            href="#"
-                            class="dropdown-toggle"
-                            role="menuitem"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            tabindex="0"
-                        >
+                        <a href="#" class="dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false"
+                            tabindex="0">
                             Services <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu" role="menu" aria-label="Services submenu">
                             <li role="none"><a role="menuitem" href="services/seo.html">SEO Services</a></li>
                             <li role="none"><a role="menuitem" href="services/smm.html">Social Media Marketing</a></li>
-                            <li role="none"><a role="menuitem" href="services/smo.html">Social Media Optimization</a></li>
+                            <li role="none"><a role="menuitem" href="services/smo.html">Social Media Optimization</a>
+                            </li>
                             <li role="none"><a role="menuitem" href="services/Flyers.html">Flyers</a></li>
                             <li role="none"><a role="menuitem" href="services/cw.html">Content Writing</a></li>
                             <li role="none"><a role="menuitem" href="services/Thumbnail.html">Thumbnail Design</a></li>
@@ -62,36 +60,16 @@
                     <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
                     <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
                     <li role="none">
-                        <a role="menuitem" href="contact.html" class="btn btn-primary active" style="color: #fff;">Contact Us</a>
+                        <a role="menuitem" href="contact.html" class="btn btn-primary" style="color: #fff;">Contact
+                            Us</a>
                     </li>
                 </ul>
-                <div class="navbar-toggle" aria-label="Toggle Menu" aria-expanded="false" role="button" tabindex="0">
-                    <i class="fas fa-bars"></i>
-                </div>
+
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="mobile-dropdown">
-                <a href="#" class="mobile-dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
-                <ul class="mobile-dropdown-menu">
-                    <li><a href="services/seo.html">SEO Services</a></li>
-                    <li><a href="services/smm.html">Social Media Marketing</a></li>
-                    <li><a href="services/smo.html">Social Media Optimization</a></li>
-                    <li><a href="services/digital-advertising.html">Digital Advertising</a></li>
-                    <li><a href="services/brand-strategy.html">Brand Strategy</a></li>
-                </ul>
-            </li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="branding.html">Branding</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="active">Contact Us</a></li>
-        </ul>
-    </div>
+    
 
     <!-- Contact Hero Section -->
     <section class="hero contact-hero">
@@ -358,6 +336,47 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 </div>
+
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.querySelector(".navbar-toggle");
+            const menu = document.querySelector(".navbar-nav");
+            const cont = document.querySelector(".container");
+            const dropdownToggles = document.querySelectorAll(".nav-dropdown > .dropdown-toggle");
+            let flag = 0;
+
+            // Mobile menu toggle
+            toggle.addEventListener("click", () => {
+                document.body.classList.toggle("menu-open");
+            });
+            toggle.addEventListener("click", () => {
+                if (flag === 0) {
+                    cont.style.flexWrap = "wrap";
+                } else {
+                    cont.style.flexWrap = "nowrap";
+                }
+                flag = 1 - flag;
+                menu.classList.toggle("active");
+                toggle.classList.toggle("active");
+                // const expanded = toggle.getAttribute("aria-expanded") === "true";
+                toggle.setAttribute("aria-expanded", !expanded);
+            });
+
+            // Dropdown toggle for mobile
+            dropdownToggles.forEach((btn) => {
+                btn.addEventListener("click", (e) => {
+                    if (window.innerWidth <= 900) {
+                        e.preventDefault();
+                        const dropdownMenu = btn.nextElementSibling;
+                        dropdownMenu.classList.toggle("active");
+                        const expanded = btn.getAttribute("aria-expanded") === "true";
+
+                        btn.setAttribute("aria-expanded", !expanded);
+                    }
+                });
+            });
+        });
+    </script>
 
 
     <script src="js/script.js"></script>
