@@ -28,6 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
         { threshold: 0.5 }
     );
 
+    // Blog Slider Initialization for Mobile
+    const blogGrid = document.querySelector('.featured-posts-grid');
+    if (blogGrid && window.innerWidth <= 900) {
+        // Optional: Add scroll indicators or dots if needed, 
+        // but the CSS 'overflow-x: auto' handles the core functionality user requested (slider)
+        // We can ensure it starts at the beginning
+        blogGrid.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+
     statNumbers.forEach((stat) => statsObserver.observe(stat));
 
     // Typing Effect for Hero Subtitle
@@ -390,28 +399,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
         question.addEventListener('click', function () {
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            // Toggle current
-            this.setAttribute('aria-expanded', String(!isExpanded));
-            if (isExpanded) {
-                answer.setAttribute('hidden', '');
-                item.classList.remove('active');
-            } else {
-                answer.removeAttribute('hidden');
-                item.classList.add('active');
-            }
-
-            // Close others
+            
+            // Close all others first
             faqItems.forEach((otherItem) => {
                 if (otherItem !== item) {
                     const otherQuestion = otherItem.querySelector('.faq-question');
                     const otherAnswer = otherItem.querySelector('.faq-answer');
                     if (otherQuestion && otherAnswer) {
-                        otherQuestion.setAttribute('aria-expanded', 'false');
-                        otherAnswer.setAttribute('hidden', '');
-                        otherItem.classList.remove('active');
+                       otherQuestion.setAttribute('aria-expanded', 'false');
+                       otherAnswer.setAttribute('hidden', '');
+                       otherItem.classList.remove('active');
+                       otherAnswer.style.maxHeight = null; // Ensure height is reset
                     }
                 }
             });
+
+            // Toggle current
+            this.setAttribute('aria-expanded', String(!isExpanded));
+            if (isExpanded) {
+                answer.setAttribute('hidden', '');
+                item.classList.remove('active');
+                answer.style.maxHeight = null;
+            } else {
+                answer.removeAttribute('hidden');
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + "px"; // Smooth expansion
+            }
         });
     });
 
