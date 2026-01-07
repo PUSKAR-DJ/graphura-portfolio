@@ -2310,12 +2310,14 @@
     }
 
     .hero-image img {
-        width: 300px;
+        width: 250px;
+        opacity: 0.9;
     }
 
     .image-glow {
-        width: 350px;
-        height: 350px;
+        width: 280px;
+        height: 280px;
+        opacity: 0.4;
     }
 
     .hero-stats {
@@ -2349,9 +2351,6 @@
         padding: 0 1.5rem;
     }
 
-    .navbar-nav {
-        display: none;
-    }
 
     .navbar-toggle {
         display: block;
@@ -3586,16 +3585,18 @@
 
 .team-member .position {
     color: var(--accent);
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .team-member .bio {
-    color: var(--text-light);
+    color: #444;
+    /* Darker text for better contrast */
     line-height: 1.6;
     padding: 0 1.5rem 1.5rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .team-member .social-links {
@@ -3725,7 +3726,15 @@
     }
 
     .team-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 }
 
@@ -3928,12 +3937,16 @@
     }
 
     .hero-image img {
-        width: 220px;
+        width: 180px;
+        /* Reduced for mobile */
+        opacity: 0.85;
     }
 
     .image-glow {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        /* Reduced for mobile */
+        height: 200px;
+        opacity: 0.3;
     }
 
     .scroll-indicator {
